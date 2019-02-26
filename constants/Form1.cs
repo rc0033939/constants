@@ -15,11 +15,11 @@ namespace constants
         public Form1()
         {
             InitializeComponent();
-//            double pi = 3.141592653589793;
+            //            double pi = 3.141592653589793;
             double c = 299792458;
-//            richTextBox1.AppendText(pi.ToString("N3") + "\n");
-//            richTextBox1.AppendText(pi.ToString("N5") + "\n");
-//            richTextBox1.AppendText(pi.ToString("N15") + "\n");
+            //            richTextBox1.AppendText(pi.ToString("N3") + "\n");
+            //            richTextBox1.AppendText(pi.ToString("N5") + "\n");
+            //            richTextBox1.AppendText(pi.ToString("N15") + "\n");
             richTextBox1.AppendText(c.ToString("0.0000000000000000E00") + "\n");
             richTextBox1.AppendText(c.ToString("0.000E00") + "\n");
             string s = "3";
@@ -34,10 +34,19 @@ namespace constants
             }
             catch
             {
-                MessageBox.Show(st + " is not an interger");
-            }  
-             
+                MessageBox.Show(st + " is not an integer");
+            }
 
+            string s2 = "3.2";
+            try
+            {
+                int i2 = int.Parse(s2);
+            }
+            catch
+            {
+                MessageBox.Show(s2 + " is not an integer");
+                int i2 = 0;
+            }
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
